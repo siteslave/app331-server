@@ -94,8 +94,8 @@ router.post('/save-report', function(req, res, next) {
 
   Users.checkApiKey(key)
     .then(function () {
-      // create folder yyyy mm
-      var file_name = off_id + '-' + moment().format('x') + '.jpg';
+      // create folder yyyy mmn
+      var file_name = service.office + '-' + moment().format('x') + '.jpg';
       var dirYear = moment().get('year');
       var dirMonth = moment().get('month') + 1;
       var yearMonthPath = dirYear + '/' + dirMonth;
